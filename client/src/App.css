@@ -1,0 +1,239 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: 0;
+}
+
+body{
+    background-color: #143F6B;
+    font-family: 'Poppins', sans-serif;
+}
+
+.app{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 8rem;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+.app h1{
+    color: #FFBFA9;
+    font-size: 7rem;
+}
+
+/* HEADER */
+.app .section-input-todo{
+    display: flex;
+    margin-top: 2rem;
+}
+
+.app .section-input-todo input{
+    height: 3rem;
+    width: 35rem;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+.app .section-input-todo input::placeholder{
+    font-family: 'Poppins', sans-serif;
+}
+
+.app .section-input-todo button{
+    height: 3rem;
+    width: 7rem;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    cursor: pointer;
+    background-color: #FFBFA9;
+    color: #fff;
+    font-size: 1rem;
+}
+/* HEADER */
+
+/* LIST TODO */
+.app .section-list-todo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+.app .section-list-todo .row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    height: 3.8rem;
+    width: 37rem;
+    background-color: #146C94;
+    color: #fff;
+    padding: .8rem;
+    border-radius: 1.2rem;
+}
+
+.app .section-list-todo .row p{
+    font-size: 1.3rem;
+}
+
+.app .section-list-todo .row .action{
+    display: flex;
+    gap: .5rem;
+}
+
+.app .section-list-todo .row .action svg{
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+.app .section-list-todo .row .action .checklist{
+    color: #27E1C1;
+}
+
+.app .section-list-todo .row .action .edit{
+    color: #FEFF86;
+}
+
+.app .section-list-todo .row .action .delete{
+    color: #E21818;
+}
+/* LIST TODO */
+
+/* MODAL */
+.active-modal {
+    overflow-y: hidden;
+}
+.modal, .overlay {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+}
+
+.overlay {
+    background: rgba(49,49,49,0.8);
+}
+
+.modal-content {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1.4;
+    background: #50a1c7;
+    padding: 14px 28px;
+    border-radius: .5rem;
+    max-width: 400px;
+    box-shadow: 0 0 100px rgba(0, 0, 0, .45)
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 7px;
+    cursor: pointer;
+    color: rgb(255, 0, 0);
+    font-size: 2rem;
+}
+
+.close-modal:hover{
+    color: rgb(161, 16, 16);
+}
+
+.modal-content h3{
+    margin: 40px 0;
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.modal-content input{
+    border: 0;
+    padding: 1rem 1rem;
+    border-radius: .8rem;
+    height: 20px;
+    width: 290px;
+    outline: none;
+    background-color: rgb(59, 88, 128);
+    color: white;
+    font-size: .9rem;
+}
+
+.modal-content input::placeholder{
+    color: white;
+}
+
+.save-edit-btn{
+    padding: .5rem 1rem;
+    border: 0;
+    border-radius: .7rem;
+    background-color: aqua;
+    display: inline-block;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.save-edit-btn:hover{
+    background-color: rgb(80, 235, 235);
+}
+/* MODAL */
+
+
+/* RESPONSIVE BREAKPOINT */
+@media (max-width: 736px) {
+    .app h1{
+        font-size: 4.5rem;
+    }
+    .app .section-input-todo input{
+        width: 17rem;
+    }
+
+    .app .section-input-todo button{
+        width: 6rem;
+    }
+
+    .app .section-list-todo .row{
+        width: 25rem;
+    }
+
+    .app .section-list-todo .row p{
+        font-size: 1rem;
+    }
+
+    .app .section-list-todo .row .action svg{
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 485px) {
+    .app .section-input-todo input{
+        width: 15rem;
+    }
+
+    .app .section-input-todo button{
+        width: 5rem;
+    }
+
+    .app .section-list-todo .row{
+        width: 21rem;
+    }
+
+    .app .section-list-todo .row p{
+        font-size: .8rem;
+    }
+
+    .app .section-list-todo .row .action svg{
+        font-size: 1rem;
+    }
+}
